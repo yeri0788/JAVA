@@ -37,6 +37,6 @@ public class E06ArrayInit
 		// 1이 출력됨
 		System.out.println("arr2Dim[0][0]="+ arr2Dim[0][0]);
 		// null로 초기화 되므로 출력시 예외가 발생한다.
-		System.out.println("arr2Dim[0][1]="+ arr2Dim[0][1]); //예외발생
+//		System.out.println("arr2Dim[0][1]="+ arr2Dim[0][1]); //예외발생
 	}
 }

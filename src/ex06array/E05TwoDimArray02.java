@@ -25,6 +25,7 @@ public class E05TwoDimArray02
 				System.out.print(arr2Dim[n][m] +" ");
 			}
 			System.out.println();
+			
 		}
 
 		/*

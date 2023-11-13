@@ -12,28 +12,13 @@ Call by Value(값에 의한 호출)
 */
 public class E03CallByValue
 {
-	
+
 	/*
 	 매개변수로 전달된 값은 복사되어 다른 지역의 메서드에서 사용할
 	 수 있게된다. 
 	 */
-	public static void callByValue(int fNum, int sNum) {
-		/*
-		 Swap(교환) : 두개의 변수가 할당받은 값을 서로 교환하는 것을 
-		 	말한다.	교한시에는 임시변수(temp) 하나가 추가로 필요하다.
-		 */
-		int temp;
-		temp = fNum;
-		fNum = sNum;
-		sNum = temp;
-		
-		// 해당 메서드 내에서는 값의 변경이 완료된 후 출력된다.
-		// 출력결과2 : 200, 100
-		System.out.println("[callByValue메소드안]"
-				+ "first="+fNum+", second="+sNum);
-		// 해당 메서드가 종료되면 호출한 지점으로 돌아간다.
-	}
-	
+
+
 	public static void main(String[] args)
 	{
 		// main지역에서 최초로 변수를 생성 및 초기화
@@ -41,15 +26,33 @@ public class E03CallByValue
 		// 출력결과1 : 100, 200
 		System.out.println("[main메소드안-호출전]"+
 				"first="+first+", second="+second);
-		
+
 		// 메서드 호출시 인수로 값을 전달한다.
 		callByValue(first, second);
-		
+
 		/*
 		 매개변수로 전달된 값은 복사되어 다른지역의 메서드내에서만
 		 변경되므로 main메서드에서는 기존값이 그대로 유지된다. 
 		 */
 		System.out.println("[main메소드안-호출후]"+
 				"first="+first+", second="+second);
+	}
+
+	public static void callByValue(int fNum, int sNum) {
+		/*
+			 Swap(교환) : 두개의 변수가 할당받은 값을 서로 교환하는 것을 
+			 	말한다.	교한시에는 임시변수(temp) 하나가 추가로 필요하다.
+		 */
+		int temp;
+		temp = fNum;
+		fNum = sNum;
+		sNum = temp;
+
+		// 해당 메서드 내에서는 값의 변경이 완료된 후 출력된다.
+		// 출력결과2 : 200, 100
+		System.out.println("[callByValue메소드안]"
+				+ "first="+fNum+", second="+sNum);
+		// 해당 메서드가 종료되면 호출한 지점으로 돌아간다.
+
 	}
 }
