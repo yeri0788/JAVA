@@ -1,4 +1,4 @@
-package ex08class;
+package ex09package;
 
 class FruitSeller3{
 	int numOfApple;
@@ -45,7 +45,7 @@ class FruitBuyer3{
 	}
 }
 
-public class E06FruitSalesMain3 {
+public class E06FruitSalesMain4 {
 
 	public static void main(String[] args) {
 
